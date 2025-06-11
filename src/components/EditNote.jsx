@@ -50,7 +50,7 @@ export default function EditNote({ note, onClose, onSave }) {
   ✓
 </button>
 
-          <button className="edit-note-select-labels-dropdown">&#9776;</button>
+          
         </div>
       </div>
     </div>

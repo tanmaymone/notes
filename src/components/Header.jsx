@@ -1,33 +1,40 @@
 import './Header.css';
-import React from 'react';
 import TakeNewNote from './TakeNewNote';
 
-function Header({ onCreateNewNote }) {
-  const [showDropdown, setShowDropdown] = React.useState(false);
+function Header({
+  onCreateNewNote,
+  searchQuery,
+  setSearchQuery,
+  onSearch,
+  onResetSearch,
+}) {
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      onSearch();
+    }
+  };
 
   return (
     <header className="header">
-      <div className="dropdown-container" style={{ position: "relative", display: "inline-block" }}>
-        <button
-          className="sidebar-toggle"
-          aria-label="Open tag list"
-          onClick={() => setShowDropdown((prev) => !prev)}
-        >
-          &#9776;
-        </button>
-        {showDropdown && (
-          <ul className="dropdown-menu">
-            <li>Dummy Option 1</li>
-            <li>Dummy Option 2</li>
-            <li>Dummy Option 3</li>
-          </ul>
-        )}
-      </div>
-      <h1 className="header-title">
+      <h1 className="header-title" style={{ cursor: 'pointer' }} onClick={onResetSearch}>
         <span className="italic-n">N</span>otes
       </h1>
-      <input type="text" className="header-search" placeholder="Search notes..." />
-      <TakeNewNote onCreateNewNote={onCreateNewNote} />
+
+      <div className="search-container">
+        <input
+          type="text"
+          className="header-search"
+          placeholder="Search notes..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          onKeyDown={handleKeyDown}
+        />
+      </div>
+
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+  <TakeNewNote onCreateNewNote={onCreateNewNote} />
+</div>
+
     </header>
   );
 }

@@ -11,6 +11,8 @@ function App() {
   });
 
   const [selectedNote, setSelectedNote] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [isSearching, setIsSearching] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(notes));
@@ -33,11 +35,34 @@ function App() {
     setNotes((prevNotes) => prevNotes.filter((n) => n.id !== id));
   };
 
+  const handleSearch = () => {
+    setIsSearching(true);
+  };
+
+  const handleResetSearch = () => {
+    setSearchQuery('');
+    setIsSearching(false);
+  };
+
+  const filteredNotes = isSearching
+    ? notes.filter(
+        (note) =>
+          note.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          note.text.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : notes;
+
   return (
     <div className="app-container">
-      <Header onCreateNewNote={openModal} />
+      <Header
+        onCreateNewNote={openModal}
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        onSearch={handleSearch}
+        onResetSearch={handleResetSearch}
+      />
       <CollectionOfNotes
-        notes={notes}
+        notes={filteredNotes}
         openModal={openModal}
         onDeleteNote={handleDeleteNote}
       />

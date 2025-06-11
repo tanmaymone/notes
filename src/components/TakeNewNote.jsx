@@ -11,7 +11,7 @@ export default function TakeNewNote({ onCreateNewNote }) {
 
   return (
     <button className="take-new-note-btn" onClick={handleClick}>
-      <span className="take-new-note-text">Take a new note</span>
+      Take a new note
     </button>
   );
 }

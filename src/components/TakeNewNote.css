@@ -1,12 +1,19 @@
 .take-new-note-btn {
-  background-color: black; /* Green */
-  border: 1px solid white; /* Green */
+  background-color: black;
+  border: 1px solid white;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 16px; /* Match search bar padding */
+  font-size: 1rem;     /* Match search bar font size */
   text-align: center;
   text-decoration: none;
   display: block;
-  font-size: 16px;
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 10px;
+  height: 100%;        /* Ensures it fills container height */
+  box-sizing: border-box;
+  transition: background 0.2s ease;
+}
+
+.take-new-note-btn:hover {
+  background-color: #1e1e1e;
 }

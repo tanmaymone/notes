@@ -1,10 +1,12 @@
 .edit-note-container {
   border: 1px solid whitesmoke;
   position: relative;
-  padding: 20px;
-  margin: 50px;
+  padding: 12px; /* reduced padding */
+  margin: 0; /* removed unnecessary margin */
   background-color: transparent;
   border-radius: 12px;
+  width: 100%; /* make it fill modal-content */
+  box-sizing: border-box;
 }
 
 .edit-note-header,
@@ -14,8 +16,9 @@
   border: none;
   outline: none;
   background: transparent;
-  margin: 3px;
+  margin: 10px;
   width: 100%;
+  resize: none;
 }
 
 .edit-note-header {

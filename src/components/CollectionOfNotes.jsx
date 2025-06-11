@@ -10,7 +10,6 @@ function CollectionOfNotes({ notes, openModal, onDeleteNote }) {
             key={note.id}
             title={note.title}
             text={note.text}
-            labels={note.labels}
             onClick={() => openModal(note)}
             onDelete={() => onDeleteNote(note.id)}
           />
