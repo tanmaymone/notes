@@ -28,15 +28,22 @@
 .note-card-title {
   font-size: 1.2rem;
   font-weight: bold;
+  margin-top: 16px; /* Add this line */
   margin-bottom: 4px;
   color: white;
   font-family: 'Roboto', sans-serif;
+  word-wrap: break-word; /* Wrap long words */
+  overflow-wrap: break-word; /* Modern alternative */
+  white-space: pre-wrap; /* Preserve line breaks and wrap */
 }
 
 .note-card-text {
   font-size: 0.95rem;
   color: #ccc;
   font-family: 'Roboto', sans-serif;
+  word-wrap: break-word; /* Wrap long words */
+  overflow-wrap: break-word; /* Modern alternative */
+  white-space: pre-wrap; /* Preserve line breaks and wrap */
 }
 
 .delete-btn {

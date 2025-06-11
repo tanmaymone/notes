@@ -9,13 +9,13 @@
 
 .edit-note-header,
 .edit-note-body {
+  font-family: 'Roboto', sans-serif;
+  color: white;
   border: none;
   outline: none;
   background: transparent;
   margin: 3px;
   width: 100%;
-  color: #333;
-  font-family: inherit;
 }
 
 .edit-note-header {
