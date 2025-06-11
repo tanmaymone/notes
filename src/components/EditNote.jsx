@@ -15,15 +15,16 @@ export default function EditNote({ note, onClose, onSave }) {
       title,
       text,
     };
-    onSave(updatedNote);
+    if(title !== placeholderHeader && text !== placeholderBody) {
+      onSave(updatedNote);
+    } 
   };
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <div className="edit-note-container">
-          <input
-            type="text"
+          <textarea
             className="edit-note-header"
             placeholder={placeholderHeader}
             value={title}
@@ -31,6 +32,7 @@ export default function EditNote({ note, onClose, onSave }) {
             onFocus={() => {
               if (title === placeholderHeader) setTitle("");
             }}
+            rows={2}
           />
 
           <textarea
