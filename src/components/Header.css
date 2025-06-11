@@ -48,6 +48,7 @@
   box-sizing: border-box;
   height: 100%;
   white-space: nowrap; /* Avoid text wrap */
+  margin-right: 25px;
 }
 
 .take-new-note-btn:hover {
