@@ -1,0 +1,12 @@
+.take-new-note-btn {
+  background-color: black; /* Green */
+  border: 1px solid white; /* Green */
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
