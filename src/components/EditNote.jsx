@@ -6,6 +6,8 @@ export default function EditNote({ note, onClose, onSave }) {
   // Local state for controlled inputs
   const [title, setTitle] = useState(note.title || "");
   const [text, setText] = useState(note.text || "");
+  const placeholderBody = "Start typing your note...";
+  const placeholderHeader = "Enter title here...";
 
   const handleSave = () => {
     const updatedNote = {
@@ -23,16 +25,22 @@ export default function EditNote({ note, onClose, onSave }) {
           <input
             type="text"
             className="edit-note-header"
-            placeholder="Enter title here..."
+            placeholder={placeholderHeader}
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            onFocus={() => {
+              if (title === placeholderHeader) setTitle("");
+            }}
           />
 
           <textarea
             className="edit-note-body"
-            placeholder="Start typing your note..."
+            placeholder={placeholderBody}
             value={text}
             onChange={(e) => setText(e.target.value)}
+            onFocus={() => {
+              if (text === placeholderBody) setText("");
+            }}
             rows={6}
           />
 
@@ -43,14 +51,14 @@ export default function EditNote({ note, onClose, onSave }) {
           </div>
 
           <button
-  className="edit-note-close-btn"
-  onClick={handleSave}
-  disabled={!title.trim() && !text.trim()}
->
-  ✓
-</button>
+            className="edit-note-close-btn"
+            onClick={handleSave}
+            disabled={!title.trim() && !text.trim()}
+          >
+            ✓
+          </button>
 
-          
+
         </div>
       </div>
     </div>

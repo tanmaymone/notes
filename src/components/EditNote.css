@@ -12,7 +12,6 @@
 .edit-note-header,
 .edit-note-body {
   font-family: 'Roboto', sans-serif;
-  color: white;
   border: none;
   outline: none;
   background: transparent;
@@ -44,26 +43,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.edit-note-label {
-    margin: 2px;
-    font-size: 0.5rem;
-}
-
-.edit-note-labels {
-    margin-top: 2rem;
-}
-
-.edit-note-select-labels-dropdown {
-  background: transparent;
-  border: none;
-  color: #fff;
-  font-size: 0.5rem;
-  cursor: pointer;
-  padding: 4px 8px;
-  transition: background 0.2s;
-   position: absolute;
-  bottom: 1px;
-  left: 1px;
 }
