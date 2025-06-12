@@ -46,12 +46,6 @@ export default function EditNote({ note, onClose, onSave }) {
             rows={6}
           />
 
-          <div className="edit-note-labels">
-            {note.labels.map((label, index) => (
-              <button key={index} className="edit-note-label">{label}</button>
-            ))}
-          </div>
-
           <button
             className="edit-note-close-btn"
             onClick={handleSave}

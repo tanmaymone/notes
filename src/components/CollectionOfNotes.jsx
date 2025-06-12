@@ -4,7 +4,7 @@ import './CollectionOfNotes.css';
 function CollectionOfNotes({ notes, openModal, onDeleteNote }) {
   return (
     
-    <div className="collection-of-notes">
+    <div>
       <div className="collection-of-notes">
         {notes.map((note) => (
           <Note
@@ -16,7 +16,7 @@ function CollectionOfNotes({ notes, openModal, onDeleteNote }) {
           />
         ))}
       </div>
-    </div>
+      </div>
   );
 }
 

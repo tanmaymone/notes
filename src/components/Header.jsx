@@ -8,10 +8,10 @@ function Header({
   onSearch,
   onResetSearch,
 }) {
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
-      onSearch();
-    }
+  const handleKeyDown = () => {
+  setTimeout(() => {
+        onSearch();
+    }, 500);
   };
 
   return (
