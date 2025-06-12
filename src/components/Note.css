@@ -35,9 +35,11 @@
   margin-bottom: 4px;
   color: white;
   font-family: 'Roboto', sans-serif;
-  word-wrap: break-word; /* Wrap long words */
-  overflow-wrap: break-word; /* Modern alternative */
-  white-space: pre-wrap; /* Preserve line breaks and wrap */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* Allow wrapping, but clamp lines */
 }
 
 .note-card-text {
