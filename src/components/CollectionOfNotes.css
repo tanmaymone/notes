@@ -1,7 +1,4 @@
-
-.notes-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
+.colleciton-of-notes {
+  overflow-y: auto;      /* Enables vertical scrolling if needed */
+  overflow-x: hidden;    /* Disables horizontal scrolling */
 }

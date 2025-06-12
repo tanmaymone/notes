@@ -3,8 +3,9 @@ import './CollectionOfNotes.css';
 
 function CollectionOfNotes({ notes, openModal, onDeleteNote }) {
   return (
-    <div className="notes-container">
-      <div className="notes-grid">
+    
+    <div className="collection-of-notes">
+      <div className="collection-of-notes">
         {notes.map((note) => (
           <Note
             key={note.id}

@@ -6,8 +6,11 @@
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   border: 1px solid #333;
   display: inline-block;
-  max-width: 340px;
-  min-width: 200px;
+  max-width: 200px;
+  min-width: 100px;
+  max-height: 100px;
+  min-height: 100px;
+  overflow: hidden;
   margin: 4px;
   box-sizing: border-box;
   position: relative;
