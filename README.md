@@ -1,6 +1,6 @@
 # 📝 Simple Notes App
 
-A minimalistic and lightning-fast note-taking app built using **React**.  
+A private (using local storage), minimalistic and lightning-fast note-taking app built using **React**.  
 No login. No distractions. Just take notes, delete them, and search when needed.
 
 ## 🚀 Live Demo
